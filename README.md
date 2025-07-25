@@ -104,7 +104,7 @@ After training and validation, the following model performance was observed:
 
 You can explore results visually using the dashboard:
 
-![Dashboard Screenshot](images/dashboard_screenshot.png)
+![Dashboard Screenshot](Supply-chain.png)
 
 ---
 
