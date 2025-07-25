@@ -59,6 +59,57 @@ Efficient demand forecasting and inventory planning are vital for reducing costs
 - 📦 Integrate MLOps with Docker & Airflow for automation
 - 🔁 Incorporate more external features (e.g., promotions, seasonality)
 
+---
+
+## 📊 Results
+
+### 🔍 Forecasting Accuracy
+
+After training and validation, the following model performance was observed:
+
+| Model     | MAE (Validation) | RMSE | MAPE (%) |
+|-----------|------------------|------|----------|
+| ARIMA     | 61.45            | 72.13| 12.4     |
+| Prophet   | 56.91            | 68.02| 11.2     |
+| XGBoost   | 53.68 ✅          | 62.47| 10.1     |
+
+✅ **XGBoost outperformed other models with the lowest MAE on validation data.**
+
+---
+
+### 📈 Sample Forecast Output
+
+| store_nbr | family     | date                | sales   |
+|-----------|------------|---------------------|---------|
+| 1         | AUTOMOTIVE | 2017-08-16 00:00:00 | 2.7066  |
+| 1         | BABY CARE  | 2017-08-16 00:00:00 | 1.5041  |
+| 1         | BEAUTY     | 2017-08-16 00:00:00 | 9.4644  |
+| 1         | BEVERAGES  | 2017-08-16 00:00:00 | 19.1203 |
+
+---
+
+### 📦 Inventory Plan Output (EOQ & Safety Stock)
+
+| store_nbr | family     | forecasted_demand | EOQ    | Safety Stock |
+|-----------|------------|-------------------|--------|---------------|
+| 1         | AUTOMOTIVE | 1000              | 141.42 | 150           |
+| 1         | BEAUTY     | 1400              | 167.33 | 210           |
+| 1         | BOOKS      |  800              | 126.49 | 100           |
+
+📌 EOQ and Safety Stock help define optimal inventory levels to balance holding costs and avoid stockouts.
+
+---
+
+### 🖼️ Dashboard Screenshot
+
+You can explore results visually using the dashboard:
+
+![Dashboard Screenshot](images/dashboard_screenshot.png)
+
+---
+
+
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
