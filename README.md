@@ -29,13 +29,6 @@ Efficient demand forecasting and inventory planning are vital for reducing costs
 - XGBoost
 - Matplotlib, Seaborn
 
-## 📁 Project Structure
-├── Supply.ipynb # Main Jupyter notebook with code and analysis
-├── data/ # Dataset folder (not included due to size/privacy)
-├── images/ # Generated plots and visualizations
-├── README.md # Project overview
-
-
 
 ## 📦 Inventory Optimization Methods
 
